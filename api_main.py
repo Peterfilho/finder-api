@@ -33,6 +33,7 @@ def test():
 #    all_users = cur.execute('SELECT *, users.* from positions join users using(user_id);').fetchall()
     all_users = cur.execute('SELECT * from positions ORDER BY position_id DESC;').fetchall()
     return jsonify({'TEST Result': all_users})
+    conn.close()
 
 #TODO INSERT A IMAGE OFF MAP WERE IS
 @app.route('/api/v1/resources/map', methods=['GET'])
@@ -49,6 +50,7 @@ def api_all():
     all_users = cur.execute('SELECT * FROM users ORDER BY user_id DESC;').fetchall()
 
     return jsonify({'users': all_users})
+    conn.close()
 
 @app.errorhandler(404)
 def page_not_found(e):
@@ -86,6 +88,7 @@ def api_filter():
     results = cur.execute(query, to_filter).fetchall()
 
     return jsonify(results)
+    conn.close()
 
 @app.route('/api/v1/resources/users', methods=['POST'])
 def post():
@@ -115,6 +118,7 @@ def locales_all():
     all_users = cur.execute('SELECT * FROM positions ORDER BY position_id DESC;').fetchall()
 
     return jsonify({'users': all_users})
+    conn.close()
 
 @app.route('/api/v1/resources/positions', methods=['GET'])
 def locales():
@@ -157,6 +161,7 @@ def locales():
     results = cur.execute(query, to_filter).fetchall()
 
     return jsonify(results)
+    conn.close()
 
 @app.route('/api/v1/resources/positions/last', methods=['GET'])
 def last_locales():
@@ -195,6 +200,7 @@ def last_locales():
     results = cur.execute(query, to_filter).fetchall()
 
     return jsonify(results)
+    conn.close()
 
 @app.route('/api/v1/resources/positions', methods=['POST'])
 def positions_post():
@@ -211,6 +217,7 @@ def positions_post():
         cur.execute("insert into positions values(NULL, '{}','{}','{}','{}','{}')".format(user_id, search, result, locale, date))
         conn.commit()
     return {'status':'success'}
+    conn.close()
 
 @app.route('/api/v1/resources/positions/app', methods=['POST'])
 def positions_post_app():
@@ -243,6 +250,7 @@ def positions_post_app():
     cur.execute("INSERT INTO positions VALUES (NULL, '{}', '{}', '{}', '{}', '{}')".format(user_id, find, result, locale, date))
     conn.commit()
     return {'Status': 'Success'}
+    conn.close()
 
 #app.run()
 
