@@ -109,6 +109,7 @@ def post():
     cur.execute("insert into users values('{}','{}','{}','{}')".format(user_id, name, department, role))
     conn.commit()
     return {'Success': user}
+    conn.close()
 
 @app.route('/api/v1/resources/positions/all', methods=['GET'])
 def locales_all():
