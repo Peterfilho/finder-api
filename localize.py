@@ -80,6 +80,7 @@ def localize(aux1, aux2, aux3, aux4, aux5, aux6):
     print()
     print("Busca: {}".format(search))
     print("Resultado: ")
+    local = ""
     for x in posicao_aprovados:
         print(candidatos[x])
 
