@@ -216,9 +216,9 @@ def localize(aux1, aux2, aux3, aux4, aux5, aux6):
             print("Local: Não encontrado!")
             local = "nao encontrado"
 
-    print("Search: ", search.tolist())
+    print("Search: ", search)
     print("locale: ", local)
-    print("Result: ", here.tolist())
+    print("Result: ", here
 
     x = {
         'Status': 'Success',
