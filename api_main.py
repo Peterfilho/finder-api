@@ -242,6 +242,11 @@ def positions_post_app():
 
     aux = localize.localize(valores[0],valores[1],valores[2],valores[3],valores[4],valores[5])
 
+    if aux == None:
+        print("Não encontrado ou fora de alcance")
+        locale = "fora de alcance"
+        result = "-100,-100,-100,-100,-100,-100"
+
     locale = aux['locale']
     result = aux['result']
     #convert a list of integers to string
