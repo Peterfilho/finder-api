@@ -218,7 +218,7 @@ def localize(aux1, aux2, aux3, aux4, aux5, aux6):
 
     print("Search: ", search)
     print("locale: ", local)
-    print("Result: ", here
+    print("Result: ", here)
 
     x = {
         'Status': 'Success',
