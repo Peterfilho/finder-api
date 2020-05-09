@@ -80,6 +80,7 @@ def localize(aux1, aux2, aux3, aux4, aux5, aux6):
     print()
     print("Busca: {}".format(search))
     print("Resultado: ")
+    search = search.tolist()
     local = ""
     here = ["-0,-0,-0,-0,-0,-0"]
     for x in posicao_aprovados:
@@ -88,6 +89,7 @@ def localize(aux1, aux2, aux3, aux4, aux5, aux6):
         here = candidatos[x][-1]
         print("Melhor resultado:")
         print(here)
+        here = here.tolist()
 
 
         if posicao_aprovados[0] == 0:
@@ -213,11 +215,16 @@ def localize(aux1, aux2, aux3, aux4, aux5, aux6):
         else:
             print("Local: Não encontrado!")
             local = "nao encontrado"
+
+    print("Search: ", search.tolist())
+    print("locale: ", local)
+    print("Result: ", here.tolist())
+
     x = {
         'Status': 'Success',
-        "search" : search.tolist(),
+        "search" : search,
         "locale" : local,
-        "result" : here.tolist()
+        "result" : here
     }
     json.dumps(x)
     if x == None:
