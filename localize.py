@@ -81,6 +81,7 @@ def localize(aux1, aux2, aux3, aux4, aux5, aux6):
     print("Busca: {}".format(search))
     print("Resultado: ")
     local = ""
+    here = ["-0,-0,-0,-0,-0,-0"]
     for x in posicao_aprovados:
         print(candidatos[x])
 
