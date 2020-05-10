@@ -236,8 +236,8 @@ def positions_post_app():
 #    print("valor que chega!")
 #    print(find)
     valores = find.split(",")
-        print("lista de inteiros: valores")
-        print(valores)
+    print("lista de inteiros: valores")
+    print(valores)
 #        aux = localize.localize(-17,-47 ,-100,-55,-100,-47)
 #        aux = localize.localize(-100,-70,-68,-55,-53,-55)
 #        valores[0],valores[1],valores[2],valores[3],valores[4],valores[5]
