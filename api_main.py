@@ -235,26 +235,30 @@ def positions_post_app():
     date = data['date']
 #    print("valor que chega!")
 #    print(find)
-    valores = valores.lstrip(' ')
-    print("valores sem espaço")
-    print(valores)
 
     valores = find.split(",")
-    print("lista de inteiros: valores")
+
+    print("valores")
     print(valores)
+
 #        aux = localize.localize(-17,-47,-100,-55,-100,-47)
 #        aux = localize.localize(-100,-70,-68,-55,-53,-55)
 #        valores[0],valores[1],valores[2],valores[3],valores[4],valores[5]
 
-    valores[0].lstrip(' ')
-    valores[1].lstrip(' ')
-    valores[2].lstrip(' ')
-    valores[3].lstrip(' ')
-    valores[4].lstrip(' ')
-    valores[5].lstrip(' ')
-
-    print("Lista de inteiros depois de tirar espaços em branco")
+    print("Antes do trip")
     print(valores)
+
+    valores[0] = int(valores[0])
+    valores[1] = int(valores[1])
+    valores[2] = int(valores[2])
+    valores[4] = int(valores[4])
+    valores[3] = int(valores[3])
+    valores[5] = int(valores[5])
+
+    print("Lista de inteiros depois de converter para int")
+    print(valores)
+
+    print(valores[0],valores[1],valores[2],valores[3],valores[4],valores[5])
 
     aux = localize.localize(valores[0],valores[1],valores[2],valores[3],valores[4],valores[5])
 

@@ -81,13 +81,17 @@ def localize(aux1, aux2, aux3, aux4, aux5, aux6):
     print()
     print("Busca: {}".format(search))
     print("Resultado: ")
+    local = "Nao encontrado"
+    here = np.array([(-0,-0,-0,-0,-0,-0)])
     for x in posicao_aprovados:
+        global local
+        global here
         print(candidatos[x])
 
         here = candidatos[x][-1]
+
         print("Melhor resultado:")
         print(here)
-
 
         if posicao_aprovados[0] == 0:
             print("Local: B1A")
@@ -209,8 +213,6 @@ def localize(aux1, aux2, aux3, aux4, aux5, aux6):
         elif posicao_aprovados[0] == 39:
             print("Local: C5")
             local = "C5"
-        else:
-            print("Local: Não encontrado!")
 
     x = {
         'Status': 'Success',
