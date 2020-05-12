@@ -154,7 +154,7 @@ def locales():
     if not (id or date or locale or role or name):
         return page_not_found(404)
 
-    query = query[:-4] + ';'
+    query = query[:-4] + 'ORDER BY position_id DESC;'
 
     conn = sqlite3.connect('locale.db')
     conn.row_factory = dict_factory
@@ -245,8 +245,8 @@ def positions_post_app():
 #        aux = localize.localize(-100,-70,-68,-55,-53,-55)
 #        valores[0],valores[1],valores[2],valores[3],valores[4],valores[5]
 
-    print("Antes do trip")
-    print(valores)
+#    print("Antes do trip")
+#    print(valores)
 
     valores[0] = int(valores[0])
     valores[1] = int(valores[1])
@@ -255,15 +255,15 @@ def positions_post_app():
     valores[3] = int(valores[3])
     valores[5] = int(valores[5])
 
-    print("Lista de inteiros depois de converter para int")
-    print(valores)
+#    print("Lista de inteiros depois de converter para int")
+#    print(valores)
 
-    print(valores[0],valores[1],valores[2],valores[3],valores[4],valores[5])
+#    print(valores[0],valores[1],valores[2],valores[3],valores[4],valores[5])
 
     aux = localize.localize(valores[0],valores[1],valores[2],valores[3],valores[4],valores[5])
 
-    print("Chegando apos rodar no localize")
-    print(aux)
+#    print("Chegando apos rodar no localize")
+#    print(aux)
 
     if aux == None:
         print("Não encontrado ou fora de alcance")
