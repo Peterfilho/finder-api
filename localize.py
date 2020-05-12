@@ -84,10 +84,14 @@ def localize(aux1, aux2, aux3, aux4, aux5, aux6):
 #    local = "Fora de alcance"
 #    here = np.array([(-0,-0,-0,-0,-0,-0)])
     for x in posicao_aprovados:
-        global local = "Fora de alcance"
-        global here = np.array([(-0,-0,-0,-0,-0,-0)])
+        global local
+        global here
         print(candidatos[x])
 
+
+        here = np.array([(-0,-0,-0,-0,-0,-0)])
+        local = "Fora de alcance"
+        
         here = candidatos[x][-1]
 
         print("Melhor resultado:")
