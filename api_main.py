@@ -24,6 +24,9 @@ def home():
 
 <p> Developed by: Peterson Medeiros</p>'''
 
+aux = localize.localize(-100,-100,-100,-100,-100,-100)
+print(aux)
+
 #SQL COMMANDS - TEST ROTE
 @app.route('/api/test', methods=['GET'])
 def test():
