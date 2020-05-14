@@ -1,4 +1,3 @@
-
 import numpy as np
 from json import JSONEncoder
 import json
@@ -81,15 +80,17 @@ def localize(aux1, aux2, aux3, aux4, aux5, aux6):
     print()
     print("Busca: {}".format(search))
     print("Resultado: ")
-    local = "Fora de alcance"
-    here = np.array([(-0,-0,-0,-0,-0,-0)])
+#    local = "Fora de alcance"
+#    here = np.array([(-0,-0,-0,-0,-0,-0)])
+
+
     for x in posicao_aprovados:
         global local
         global here
         print(candidatos[x])
 
-        #here = np.array([(-0,-0,-0,-0,-0,-0)])
-        #local = "Fora de alcance"
+        here = np.array([(-0,-0,-0,-0,-0,-0)])
+        local = "Fora de alcance"
 
         here = candidatos[x][-1]
 
