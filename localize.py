@@ -2,6 +2,9 @@ import numpy as np
 from json import JSONEncoder
 import json
 
+here = np.array([(-0,-0,-0,-0,-0,-0)])
+local = "Fora de alcance"
+
 #search = np.array([(-66,-76,-78,-62,-79,-81)]) #busca B6A retorna (B6B, B6C, e B10.5)
 #search = np.array([(-73,-73,-77,-53,-70,-78)]) #busca B6B retorna (B6A, B6B, B6C, B10.5)
 #search = np.array([(-70,-60,-61,-69,-78,-72)]) #busca B9B retorna (B9B)
@@ -90,6 +93,7 @@ def localize(aux1, aux2, aux3, aux4, aux5, aux6):
         print(candidatos[x])
 
         here = np.array([(-0,-0,-0,-0,-0,-0)])
+
         local = "Fora de alcance"
 
         here = candidatos[x][-1]

@@ -19,13 +19,14 @@ def dict_factory(cursor, row):
 
 @app.route('/', methods=['GET'])
 def home():
+    aux = localize.localize(-100,-100,-100,-100,-100,-100)
+    print(aux)
+
     return '''<h1>Were i am</h1>
-<p>A prototype API to localize users using ieee 802.11.</p>
+    <p>A prototype API to localize users using ieee 802.11.</p>
 
-<p> Developed by: Peterson Medeiros</p>'''
+    <p> Developed by: Peterson Medeiros</p>'''
 
-aux = localize.localize(-100,-100,-100,-100,-100,-100)
-print(aux)
 
 #SQL COMMANDS - TEST ROTE
 @app.route('/api/test', methods=['GET'])
