@@ -158,7 +158,7 @@ def locales():
     if not (id or date or locale or role or name):
         return page_not_found(404)
 
-    query = query[:-4] + 'ORDER BY position_id DESC;'
+    query = query[:-4] + ';'
 
     conn = sqlite3.connect('locale.db')
     conn.row_factory = dict_factory
