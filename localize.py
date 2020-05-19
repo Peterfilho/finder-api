@@ -57,7 +57,7 @@ def localize(aux1, aux2, aux3, aux4, aux5, aux6):
     C4 = np.array([(-55,-46,-57,-52,-54,-55)])      #C4
     C5 = np.array([(-100,-48,-60,-58,-64,-57)])      #C5
 
-    candidatos = [B1B, B2A, B2B, B3A, B3B, B4A, B4B, B4C, B5A, B5B, B6A, B6B, B6C, B7A, B7B, B8A, B8B, B9B, B101, B102, B103, B104, B105, B11B, B12B, WCM, WCF, C1, C2, C3, C4, C5]
+    candidatos = [B1B, B2A, B2B, B3A, B3B, B4B, B5A, B5B, B6A, B6B, B6C, B7A, B7B, B8A, B8B, B9B, B101, B102, B103, B104, B105, B11B, B12B, WCM, WCF, C1, C2, C3, C4, C5]
     margem_erroP = 20.0
     margem_erroN = -20.0
 
