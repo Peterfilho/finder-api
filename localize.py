@@ -39,9 +39,9 @@ def localize(aux1, aux2, aux3, aux4, aux5, aux6):
     B9B = np.array([(-70,-61,-63,-69,-78,-75)])      #B9B
 #    B9C = np.array([(-70,-57,-75,-75,-100,-79)])     #B9C
     B101 = np.array([(-63,-73,-70,-68,-100,-85)])     #B10.1
-    B102 = np.array([(-57,-70,-65,-70,-78,-81)])      #B10.2
+    #B102 = np.array([(-57,-70,-65,-70,-78,-81)])      #B10.2
     B103 = np.array([(-56,-70,-67,-75,-100,-100)])    #B10.3
-    B104 = np.array([(-56,-65,-72,-72,-100,-100)])    #B10.4
+    #B104 = np.array([(-56,-65,-72,-72,-100,-100)])    #B10.4
     B105 = np.array([(-64,-75,-78,-60,-76,-76)])      #B10.5
 #    B11A = np.array([(-78,-52,-73,-73,-78,-76)])      #B11A
     B11B = np.array([(-77,-58,-68,-74,-100,-78)])     #B11B
@@ -51,15 +51,15 @@ def localize(aux1, aux2, aux3, aux4, aux5, aux6):
 #    B12C = np.array([(-72,-64,-77,-78,-100,-78)])     #B12C
     WCM = np.array([(-100,-70,-68,-55,-53,-55)])     #WC-M
     WCF = np.array([(-100,-76,-80,-78,-71,-60)])     #WC-F
-    C1 = np.array([(-100,-61,-69,-61,-61,-43)])     #C1
-    C2 = np.array([(-100,-48,-59,-53,-49,-52)])     #C2
-    C3 = np.array([(-67,-58,-60,-48,58,-57)])       #C3
-    C4 = np.array([(-55,-46,-57,-52,-54,-55)])      #C4
-    C5 = np.array([(-100,-48,-60,-58,-64,-57)])      #C5
+#    C1 = np.array([(-100,-61,-69,-61,-61,-43)])     #C1
+#    C2 = np.array([(-100,-48,-59,-53,-49,-52)])     #C2
+#    C3 = np.array([(-67,-58,-60,-48,58,-57)])       #C3
+#    C4 = np.array([(-55,-46,-57,-52,-54,-55)])      #C4
+#    C5 = np.array([(-100,-48,-60,-58,-64,-57)])      #C5
 
-    candidatos = [B1B, B2A, B2B, B3A, B3B, B4B, B5A, B5B, B6B, B7A, B7B, B8A, B8B, B9B, B101, B102, B103, B104, B105, B11B, B12B, WCM, WCF, C1, C2, C3, C4, C5]
-    margem_erroP = 20.0
-    margem_erroN = -20.0
+    candidatos = [B1B, B2A, B2B, B3A, B3B, B4B, B5A, B5B, B6B, B7A, B7B, B8A, B8B, B9B, B101, B103, B105, B11B, B12B, WCM, WCF]
+    margem_erroP = 10.0
+    margem_erroN = -10.0
 
     distancias = candidatos[::] - search # Avalia a distância de cada vetor para o vetor de busca.
     #print(distancias)
