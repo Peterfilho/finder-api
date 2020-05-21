@@ -58,8 +58,8 @@ def localize(aux1, aux2, aux3, aux4, aux5, aux6):
     C5 = np.array([(-100,-48,-60,-58,-64,-57)])      #C5
 
     candidatos = [B1A, B1B, B1C, B2A, B2B, B3A, B3B, B4A, B4B, B4C, B5A, B5B, B6A, B6B, B6C, B7A, B7B, B8A, B8B, B9A, B9B, B9C, B101, B102, B103, B104, B105, B11A, B11B, B11C, B12A, B12B, B12C, WCM, WCF, C1, C2, C3, C4, C5]
-    margem_erroP = 20.0
-    margem_erroN = -20.0
+    margem_erroP = 10.0
+    margem_erroN = -10.0
 
     distancias = candidatos[::] - search # Avalia a distância de cada vetor para o vetor de busca.
     #print(distancias)
